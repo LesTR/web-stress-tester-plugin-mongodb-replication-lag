@@ -1,0 +1,16 @@
+{
+  "name": "web-stress-tester-plugin-mongodb-replication-lag",
+  "version": "0.0.0",
+  "description": "Plugin for web stress tester for monitoring mongodb replication lag during test",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+	 "mongodb": "*"
+  },
+  "repository": "",
+  "author": "Lukas Drbal",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
