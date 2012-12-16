@@ -16,6 +16,7 @@ module.exports = class ReplicationLagPlugin extends EventEmiter
 		MongoClient.connect @config.url, (error, @client) =>
 			if error
 				@emit 'error', error
+			@emit 'ready'
 			@check()
 
 	stop: () ->
