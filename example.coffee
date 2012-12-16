@@ -25,7 +25,7 @@ mongoPlugin.on 'critical', (delay,cnt, hostname)->
 cnt=0
 mongoPlugin.on 'new-value', (data)->
 	for value in data
-		util.log "Delay from #{value.host} are #{value.delay} seconds"
+		util.log "Delay from #{value.name} are #{value.value} seconds"
 	
 	if cnt++ > 10
 		mongoPlugin.close()

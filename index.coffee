@@ -42,7 +42,7 @@ module.exports = class ReplicationLagPlugin extends EventEmiter
 			newValue=[]
 			for slave in slavesOptime
 				delay = parseInt(masterOptime)-parseInt(slave.optime)
-				newValue.push {host: slave.name, delay}
+				newValue.push {name: slave.name, value:delay}
 				if delay >= @config.criticalLevel
 					@criticalCounter++
 					@emit 'critical', delay, @criticalCounter, slave.name
